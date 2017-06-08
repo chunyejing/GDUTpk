@@ -1,0 +1,71 @@
+{% include 'common-header.html' %}
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-globe"></span> Logo</a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
+						<ul class="dropdown-menu" aria-labelledby="about-us">
+							<li><a href="#">Engage</a></li>
+							<li><a href="#">Pontificate</a></li>
+							<li><a href="#">Synergize</a></li>
+						</ul>
+					</li>    
+                </ul>
+
+				<!-- Search -->
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control">
+					</div>
+					<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Search</button>
+				</form>
+                    {% if request.user.is_authenticated %}
+                    <a class="btn btn-default navbar-btn navbar-right" href="/focus/login">Logout</a>
+                    {% else %}
+					<a class="btn btn-default navbar-btn navbar-right" href="/focus/login">Login</a>
+                    {% endif %}				
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    {% block content %}
+    {% endblock %}
+
+</body>
+    <!-- jQuery -->
+    <script src="{% static "js/jquery-1.11.3.min.js" %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+	
+	<!-- IE10 viewport bug workaround -->
+	<script src="{% static "js/ie10-viewport-bug-workaround.js" %}"></script>
+	
+	<!-- Placeholder Images -->
+	<script src="{% static "js/holder.min.js" %}"></script>
+    {% block script %} 
+    {% endblock %}
+</html>
