@@ -1,0 +1,47 @@
+h1, h2, h3, h4, h5, h6 {
+	color: black;
+	}
+html, body {
+	height: 100%;
+}
+body {
+	    padding-bottom: 30px;
+	background-color: #f3f3f3;
+}
+#wall {
+	min-height: 100%;
+	height: auto;
+	margin: 0 auto -80px;
+}
+
+.white-back {
+	background-color: #ffffff;
+	padding: 30px;
+}
+#side-carousel img {
+	margin: 0 auto;
+	}
+
+.footer-blurb {
+    padding: 30px 0;
+    margin-top: 20px;
+    background-color: #eee;
+    color: black;
+}
+    
+.footer-blurb-item {
+    padding: 20px;
+    }
+ 
+.small-print {
+
+	padding: 10px 0;
+}
+
+.feature,
+.page-intro,
+.article-intro,
+.small-print {
+	text-align: center;
+	}
+	
